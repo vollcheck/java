@@ -9,9 +9,7 @@ public class Second {
         for (String page : pages) {
             try {
                 socket = new Socket(page, 80);
-            } catch (UnknownHostException e) {
-                System.out.println(e);
-            } catch (IOException e) {
+            } catch (UnknownHostException | IOException e) {
                 System.out.println(e);
             }
 

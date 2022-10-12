@@ -13,14 +13,9 @@ public class First {
     public static void main(String[] args) throws Exception {
         // sequential task
         URL otodom = new URL("https://www.otodom.pl/wynajem/mieszkanie/sopot/");
-        System.out.println("debug0");
         BufferedReader in = new BufferedReader(new InputStreamReader(otodom.openStream()));
-
-        System.out.println("debug1");
         ExecutorService es = Executors.newFixedThreadPool(5);
-
         Future<ArrayList<String>> future = es.submit(() -> extractLinks(in));
-
         ArrayList<String> result = null;
 
         try {
