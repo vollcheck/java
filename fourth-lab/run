@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+set -e
+
+sqlite_jar=.:/home/jaw/code/java/lib/sqlite-jdbc-3.40.0.0.jar
+
+files="$@"
+
+for i in $files;
+do
+    echo "Compiling $i"
+    javac -cp $sqlite_jar "$i.java"
+done
+
+for i in $files;
+do
+    echo "Executing $i"
+    java -cp $sqlite_jar "$i"
+done
+
+# Local Variables:
+# mode: sh
+# End:

@@ -1,8 +1,8 @@
-/*-prezentacja.pptx
-/*-zadania.docx
+*.docx
 *.pptx
 /first-lab/src/main/*.org
 /first-lab/src/main/links.txt
 *.class
 lib/*
 *.zip
+*.db
