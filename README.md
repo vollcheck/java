@@ -4,7 +4,7 @@
 
 - [X] first
 - [X] second
-- [ ] third
+- [X] third
 - [ ] fourth
 - [ ] fifth
 - [ ] sixth
