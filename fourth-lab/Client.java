@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 public class Client {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Socket clientSocket = null;
         try {
             clientSocket = new Socket("localhost", 6666);
@@ -19,16 +19,16 @@ public class Client {
         System.out.println("Połączono z " + clientSocket);
         //deklaracje zmiennych strumieniowych
         String line;
-        BufferedReader brSockInp;
-        BufferedReader brLocalInp;
-        DataOutputStream socketOut;
-        InputStreamReader socketIn;
-        InputStreamReader localIn;
+        BufferedReader brSockInp = null;
+        BufferedReader brLocalInp = null;
+        DataOutputStream socketOut = null;
+        InputStreamReader socketIn = null;
+        InputStreamReader localIn = null;
         //utworzenie strumieni
         try {
             socketOut = new DataOutputStream(clientSocket.getOutputStream());
             socketIn = new InputStreamReader(clientSocket.getInputStream());
-            brSockInp = new BufferedReader(in);
+            brSockInp = new BufferedReader(socketIn);
             brLocalInp = new BufferedReader(localIn);
         } catch (IOException e) {
             System.out.println("Błąd przy tworzeniu strumieni: " + e);

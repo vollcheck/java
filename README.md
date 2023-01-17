@@ -5,6 +5,6 @@
 - [X] first
 - [X] second
 - [X] third
-- [ ] fourth
+- [X] fourth
 - [ ] fifth
 - [ ] sixth

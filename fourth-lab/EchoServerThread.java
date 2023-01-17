@@ -4,6 +4,7 @@ import java.io.*;
 public class EchoServerThread implements Runnable
 {
     protected Socket socket;
+
     public EchoServerThread(Socket clientSocket) {
         this.socket = clientSocket;
     }

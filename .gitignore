@@ -6,3 +6,7 @@
 lib/*
 *.zip
 *.db
+*.iml
+*/.idea/*
+*.jar
+*/out
