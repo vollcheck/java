@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+set -e
+
+jsoup_jar=.:/home/jaw/code/java/lib/jsoup-1.15.3.jar
+
+javac -cp $jsoup_jar "$1.java" && java -cp $jsoup_jar $1
+
+# Local Variables:
+# mode: sh
+# End:
